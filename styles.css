@@ -1,0 +1,181 @@
+:root {
+    --primary: #2374ab;
+    --primary-dark: #18527a;
+    --accent: #f4d160;
+    --bg: #f9f9f9;
+    --text: #1a1a1a;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* Header and Navigation */
+header {
+    background: var(--primary);
+    color: white;
+    padding-bottom: 2em;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em 2em;
+}
+.logo {
+    font-size: 1.6em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2em;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+nav a:hover {
+    color: var(--accent);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 4em 1em 2em 1em;
+}
+.hero h1 {
+    font-size: 2.8em;
+    margin-bottom: 0.3em;
+}
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+}
+.cta-btn {
+    background: var(--accent);
+    color: var(--primary-dark);
+    padding: 0.8em 2em;
+    border: none;
+    border-radius: 30px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+.cta-btn:hover {
+    background: #ffe69d;
+}
+
+/* Services */
+.services {
+    padding: 3em 1em;
+    background: white;
+    text-align: center;
+}
+.services-list {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2em;
+}
+.service-card {
+    background: var(--bg);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(35,116,171,0.07);
+    padding: 1.8em 1.2em;
+    flex: 1 1 250px;
+    max-width: 300px;
+}
+.service-card h3 {
+    margin-top: 0;
+    color: var(--primary-dark);
+}
+
+/* About */
+.about {
+    padding: 3em 1em;
+    background: var(--bg);
+    text-align: center;
+    font-size: 1.1em;
+}
+
+/* Contact */
+.contact {
+    padding: 3em 1em;
+    background: white;
+    text-align: center;
+}
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    max-width: 400px;
+    margin: 0 auto 1.5em auto;
+}
+#contact-form input, #contact-form textarea {
+    padding: 0.8em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    font-family: inherit;
+}
+#contact-form button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.8em 0;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+#contact-form button:hover {
+    background: var(--primary-dark);
+}
+.form-message {
+    color: var(--primary-dark);
+    font-weight: 500;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5em 0;
+    background: var(--primary-dark);
+    color: #fff;
+    font-size: 1em;
+    margin-top: 2em;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .services-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        gap: 1em;
+        padding: 1em;
+    }
+    .hero {
+        padding: 2em 1em 1em 1em;
+    }
+}
