@@ -1,16 +1,29 @@
 @font-face {
-    font-family: 'Glancyr Regular';
-    src: url('/fonts/Glancyr_Regular') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
+      font-family: 'Glancyr';
+      src: url('/fonts/Glancyr-Regular.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
 
 :root {
-    --primary: #2374ab;
-    --primary-dark: #18527a;
-    --accent: #f4d160;
+    --primary: #1E444F;
+    --accent: #EAFD5B;
     --bg: #f9f9f9;
-    --text: #1a1a1a;
+    --text: #161616;
+}
+
+header {
+    background: var(--primary);
+    color: white;
+    position: fixed;
+    width: 100%;
+    height: 5em;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em 2em;
 }
 
 * {
@@ -19,23 +32,11 @@
 
 body {
     margin: 0;
-    font-family: 'Glancyr Regular', Arial, sans-serif;
+    font-family: 'Glancyr', sans-serif;
     background: var(--bg);
     color: var(--text);
 }
 
-/* Header and Navigation */
-header {
-    background: var(--primary);
-    color: white;
-    padding-bottom: 2em;
-}
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5em 2em;
-}
 .logo {
     font-size: 1.6em;
     font-weight: bold;
@@ -73,7 +74,7 @@ nav a:hover {
 }
 .cta-btn {
     background: var(--accent);
-    color: var(--primary-dark);
+    color: var(--primary);
     padding: 0.8em 2em;
     border: none;
     border-radius: 30px;
@@ -84,10 +85,10 @@ nav a:hover {
     transition: background 0.2s;
 }
 .cta-btn:hover {
-    background: #ffe69d;
+    background: var(--bg);
 }
 
-/* Services */
+/* Servicios y Proyectos */
 .services {
     padding: 3em 1em;
     background: white;
@@ -110,13 +111,13 @@ nav a:hover {
 }
 .service-card h3 {
     margin-top: 0;
-    color: var(--primary-dark);
+    color: var(--primary);
 }
 
 /* About */
 .about {
     padding: 3em 1em;
-    background: var(--bg);
+    background: white;
     text-align: center;
     font-size: 1.1em;
 }
@@ -152,21 +153,21 @@ nav a:hover {
     transition: background 0.2s;
 }
 #contact-form button:hover {
-    background: var(--primary-dark);
+    background: var(--primary);
 }
 .form-message {
-    color: var(--primary-dark);
+    color: var(--primary);
     font-weight: 500;
 }
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 1em 0;
-    background: var(--primary-dark);
+    padding: 1.5em 0;
+    background: var(--primary);
     color: #fff;
     font-size: 1em;
-    margin-top: 0.5em;
+    margin-top: 2em;
 }
 
 /* Responsive */
