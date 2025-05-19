@@ -3,29 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aeros Drone Services</title>
+    <title>Aeros</title>
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo"><img src="/img/logo.png" alt="Logo" style="height:70px;"></div>
-            <ul>
-                <li><a href="#servicios">Servicios</a></li>
+      <nav>
+        <div class="logo"><img src="/img/logo.png" alt="Logo" style="height:5em"></div>
+              <ul>
                 <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
                 <li><a href="#contacto">Contacto</a></li>
-            </ul>
+              </ul>
         </nav>
+    </header>
         <section class="hero">
-            <h1>Aeros Drone Services</h1>
-            <p>Capturing breathtaking aerial imagery and data for your business or project.</p>
+            <h1>Somos Aeros</h1>
+            <p>Perspectivas que transforman</p>
             <a href="#contacto" class="cta-btn">Contactanos</a>
         </section>
-    </header>
-
     <main>
+        <section id="nosotros" class="about">
+            <h2>Sobre Nosotros</h2>
+            <p>We are certified drone pilots with years of experience in aerial photography, mapping, and inspections. Safety and quality are our top priorities. Let us elevate your project with our cutting-edge drone solutions.</p>
+        </section>
+
         <section id="servicios" class="services">
-            <h2>Nuestros Servicios</h2>
+            <h2>Servicios Destacados</h2>
             <div class="services-list">
                 <div class="service-card">
                     <h3>Aerial Photography</h3>
@@ -42,17 +48,30 @@
             </div>
         </section>
 
-        <section id="nosotros" class="about">
-            <h2>Sobre Nosotros</h2>
-            <p>We are certified drone pilots with years of experience in aerial photography, mapping, and inspections. Safety and quality are our top priorities. Let us elevate your project with our cutting-edge drone solutions.</p>
+        <section id="proyectos" class="services">
+            <h2>Proyectos Destacados</h2>
+            <div class="services-list">
+                <div class="service-card">
+                    <h3>Aerial Photography</h3>
+                    <p>Stunning high-resolution photos and videos from the sky for real estate, events, and more.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Survey & Mapping</h3>
+                    <p>Accurate, data-driven mapping for agriculture, construction, and land surveying.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Inspection</h3>
+                    <p>Safe and efficient inspection of roofs, towers, solar panels, and more.</p>
+                </div>
+            </div>
         </section>
 
         <section id="contacto" class="contact">
             <h2>Contactanos</h2>
-            <form id="contact-form">
-                <input type="text" placeholder="Nombre" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Tu mensaje" required></textarea>
+            <form id="contact-form" action="sendmail.php" method="POST">
+                <input type="text" name="name" placeholder="Nombre" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="message" placeholder="Tu mensaje" required></textarea>
                 <button type="submit">Enviar Mensaje</button>
             </form>
             <p class="form-message"></p>
@@ -60,7 +79,7 @@
     </main>
     
     <footer>
-        <p>&copy; 2025 JLnV.</p>
+        <p>L - IG - ?</p>
     </footer>
 
     <script src="script.js"></script>
