@@ -1,11 +1,19 @@
-// Simple form handler for demo purposes
-const form = document.getElementById('contact-form');
-const message = document.querySelector('.form-message');
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const form = this;
+    const formData = new FormData(form);
+    const formMessage = document.querySelector('.form-message');
 
-if(form) {
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        message.textContent = "Thank you for your message! We'll get back to you soon.";
+    fetch('sendmail.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.text())
+    .then(text => {
+        formMessage.textContent = text;
         form.reset();
+    })
+    .catch(() => {
+        formMessage.textContent = 'Error al enviar el mensaje.';
     });
-}
+});

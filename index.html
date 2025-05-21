@@ -7,10 +7,9 @@
     <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <header>
+<header>
       <nav>
-        <div class="logo"><img src="/img/logo.png" alt="Logo" href="#inicio" style="height:3em; vertical-align: middle;"></div>
+        <div class="logo"><img src="/img/logo.png" alt="Logo" style="height:3em; vertical-align: middle;"></div>
               <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#nosotros">Nosotros</a></li>
@@ -20,67 +19,103 @@
               </ul>
         </nav>
     </header>
-        <section class="hero" id="inicio">
-            <h1>Somos Aeros</h1>
-            <p>Perspectivas que transforman</p>
-            <a href="#contacto" class="cta-btn">Contactanos</a>
+<body>
+        <section id="inicio" class="hero">
+        <h1>Perspectivas que transforman</h1>
+        <p>Hablemos de tu proyecto!<br/></p>
+        <a href="#contacto" class="cta-btn">Contactanos</a>
         </section>
     <main>
         <section id="nosotros" class="about">
             <h2>Sobre Nosotros</h2>
-            <p>We are certified drone pilots with years of experience in aerial photography, mapping, and inspections. Safety and quality are our top priorities. Let us elevate your project with our cutting-edge drone solutions.</p>
+            <p>Aeros es una empresa de servicios con drones que combina tecnología de
+precisión y compromiso humano para ofrecer soluciones técnicas y visuales en
+diversos sectores industriales. Fundada en 2023, comenzó enfocándose en
+topografía y busca ampliar su alcance a campos como electricidad, minería,
+ingeniería civil, arquitectura y planificación territorial. Reflejando su enfoque
+innovador y personalizado, con valores como precisión, responsabilidad,
+versatilidad, innovación y cercanía, Aeros busca posicionarse como una marca
+moderna, profesional y confiable. Nuestra propuesta diferencial radica en el uso
+de drones RTK y tecnologías avanzadas para entregar resultados personalizados
+y adaptables a las necesidades de los clientes, siempre con un trato humano y un
+enfoque técnico sólido. La empresa planea expandirse hacia nuevos sectores,
+especialmente el energético, consolidando su presencia con una identidad visual
+profesional y atractiva, que incluye el desarrollo de una página web y estrategias
+de marketing digital.</p>
         </section>
 
         <section id="servicios" class="services">
             <h2>Servicios Destacados</h2>
             <div class="services-list">
                 <div class="service-card">
-                    <h3>Aerial Photography</h3>
-                    <p>Stunning high-resolution photos and videos from the sky for real estate, events, and more.</p>
+                    <h3>Levantamientos Topográficos</h3>
+                    <p>Curvas de nivel, ortomosaicos, modelos digitales de terreno</p>
                 </div>
                 <div class="service-card">
-                    <h3>Survey & Mapping</h3>
-                    <p>Accurate, data-driven mapping for agriculture, construction, and land surveying.</p>
+                    <h3>Cierre de canteras</h3>
+                    <p>Cálculo volumétrico y planimetría para proyectos de rehabilitación</p>
                 </div>
                 <div class="service-card">
-                    <h3>Inspection</h3>
-                    <p>Safe and efficient inspection of roofs, towers, solar panels, and more.</p>
+                    <h3>Modelado 3D</h3>
+                    <p>Reconstrucción digital de infraestruturas, edificaciones e instalaciones indutriales para análisis estructural, planificación y seguimiento de proyectos</p>
+                </div>
+                <div class="service-card">
+                    <h3>Monitoreo</h3>
+                    <p>Inspección aérea de infraestructuras, vigilancia en zonas de difícil acceso para optimizar seguridad y mantenimiento</p>
                 </div>
             </div>
+            <div class="services-info">
+            <h3>NOS ADAPTAMOS A TU PROYECTO</h3>
+            <p>Si tenés una idea en mente nosotros te ayudamos a concretarla. Consultanos y tabajemos juntos la mejor solución para tu proyecto. </p>
+            <br><a href="#contacto" class="cta-btn">Contactanos</a>
+        </div>
         </section>
 
         <section id="proyectos" class="services">
             <h2>Proyectos Destacados</h2>
-            <div class="services-list">
-                <div class="service-card">
-                    <h3>Aerial Photography</h3>
-                    <p>Stunning high-resolution photos and videos from the sky for real estate, events, and more.</p>
+            <div class="projects-list">
+                <div class="project-card">
+                    <h3>Lezama, Buenos Aires</h3>
+                    <p>Relevamiento en cantera para control y planificación de explotación</p>
                 </div>
-                <div class="service-card">
-                    <h3>Survey & Mapping</h3>
-                    <p>Accurate, data-driven mapping for agriculture, construction, and land surveying.</p>
+                <div class="project-card">
+                    <h3>Glaciar Buenos Aires, Antártida Argentina</h3>
+                    <p>Seguimiento en superficie en conjunto con Georradar, para la detección de grietas glaciares</p>
                 </div>
-                <div class="service-card">
-                    <h3>Inspection</h3>
-                    <p>Safe and efficient inspection of roofs, towers, solar panels, and more.</p>
+                <div class="project-card">
+                    <h3>Chos Malal, Neuquén</h3>
+                    <p>Levantamiento en zona de río para la futura instalación de cañerías</p>
                 </div>
             </div>
         </section>
 
         <section id="contacto" class="contact">
             <h2>Contactanos</h2>
-            <form id="contact-form" action="sendmail.php" method="POST">
-                <input type="text" name="name" placeholder="Nombre" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <textarea name="message" placeholder="Tu mensaje" required></textarea>
-                <button type="submit">Enviar Mensaje</button>
-            </form>
-            <p class="form-message"></p>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Si necesitás más información o querés cotizar tu proyecto, no dudes en
+contactarnos, estaremos encantados de ayudarte a encontrar la solución
+perfecta para tu necesidad.</h3>
+                    <ul>
+                        <li>Teléfono: +54 221 2009320</li>
+                        <li>Email: <a href="mailto:info@aerosds.com.ar" style="color:var(--blanco-aero)">info@aerosds.com.ar</a></li>
+                    </ul>
+                </div>
+                <div class="contact-form-container">
+                    <form id="contact-form" action="sendmail.php" method="POST">
+                    <input type="text" name="name" placeholder="Nombre" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <textarea name="message" placeholder="Tu mensaje" required></textarea>
+                    <button type="submit">Enviar Mensaje</button>
+                    </form>
+                    <p class="form-message"></p>
+                </div>
+            </div>
         </section>
     </main>
     
     <footer>
-        <p>L - IG - ?</p>
+        <p><a href="https://www.linkedin.com/company/aeros-ds/"><img src="/img/li-logo.svg" alt="LinkedIn Logo"></a> <a href="https://www.instagram.com/aeros.ds/"><img src="/img/ig-logo.svg" alt="Instagram Logo"></a> <a href="mailto:info@aerosds.com.ar"><img src="/img/em-logo.svg" alt="Email"></a></p>
     </footer>
 
     <script src="script.js"></script>
