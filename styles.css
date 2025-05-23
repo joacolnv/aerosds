@@ -20,6 +20,7 @@ header {
     color: var(--blanco-aero);
     width: 100%;
     height: 5em;
+    z-index: 100;
 }
 nav {
     display: flex;
@@ -61,14 +62,14 @@ nav a {
     font-weight: 500;
     transition: color 0.2s;
 }
-nav a:hover {
+nav a:hover, nav a.active {
     color: var(--amarillo-aero);
 }
 
 /* Hero Section */
 .hero {
     text-align: left;
-    padding: 10em 1em 10em 4em;
+    padding: 14em 1em 10em 4em;
     color: var(--amarillo-aero);
     height: 100%;
     background: url("/img/hero-bg.png") right no-repeat;
@@ -113,7 +114,7 @@ nav a:hover {
     max-width: 65%;
 }
 
-/* Servicios y Proyectos */
+/* Servicios */
 .services {
     padding: 5em 1em 5em;
     text-align: center;
@@ -145,6 +146,8 @@ nav a:hover {
     margin-top: 0;
     color: var(--amarillo-aero);
 }
+
+/* Proyectos */
 .projects-list {
     display: grid;
     grid-template-columns: repeat(3, max-content);
@@ -154,38 +157,51 @@ nav a:hover {
     margin-top: 2em;
 }
 .project-card {
+    position: relative;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(35,116,171,0.07);
     padding: 2em 2em;
     width: 400px;
     height: 700px;
-    display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    justify-content: flex-end;
 }
-.project-card:nth-child(1) {
-  background-image: url('img/project1-bg.png');
-  background-size: cover;
-  background-position: center;
-}
-.project-card:nth-child(2) {
-  background-image: url('img/project2-bg.png');
-  background-size: cover;
-  background-position: center;
-}
-.project-card:nth-child(3) {
-  background-image: url('img/project3-bg.png');
-  background-size: cover;
-  background-position: center;
-}
-.project-card h3, .project-card p {
+.project-title {
     text-align: center;
+    top: 10%;
     width: 100%;
     margin-top: 0;
     color: var(--blanco-aero);
+    background-color: rgba(30, 68, 79, 0.8);
+    border-radius: 10px;
+    font-size: 2em;
+    pointer-events: none;
+    padding: 0.5em 0.2em 0.5em 0.2em;
 }
-.project-card h3 {
-    padding-top: 4em;
+.project-info {
+    padding: 1em 1em 1em 1em;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    margin-top: 0.5em;
+    color: var(--amarillo-aero);
+    background: rgba(30, 68, 79, 0.8);
+    opacity: 0;
+    pointer-events: none;
+    line-height: 1.5em;
+    transition: opacity 0.3s;
+}
+.project-card:hover .project-info,
+.project-card:focus-within .project-info {
+  opacity: 1;
+  pointer-events: auto;
+}
+.project-card.show-info .project-info {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* Contacto */
@@ -195,7 +211,7 @@ nav a:hover {
     color: var(--blanco-aero);
     text-align: center;    
     background: url("/img/contact-bg.png") right no-repeat;
-    background-size: 800px 500px;
+    background-size: 640px 400px;
 }
 #contact-form {
     display: flex;
@@ -241,47 +257,20 @@ nav a:hover {
   margin: 0 auto;
   min-height: 400px;
 }
-
 .contact-info, .contact-form-container {
   flex: 1 1 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
 .contact-info {
   align-items: flex-start;
   padding: 2em;
   color: var(--amarillo-aero);
 }
-
 .contact-form-container {
   align-items: center;
   padding: 2em;
-}
-
-@media (max-width: 768px) {
-  .contact-wrapper {
-    flex-direction: column;
-    align-items: stretch;
-    min-height: unset;
-  }
-  .contact-info, .contact-form-container {
-    align-items: flex-start;
-    padding: 1em 0;
-  }
-  .contact-form-container {
-    align-items: flex-start;
-  }
-  .services-list {
-    grid-template-columns: 1fr;
-    grid-template-rows: none;
-    justify-items: center;
-  }
-  .service-card {
-    max-width: 90%;
-    width: 100%;
-  }
 }
 
 /* Footer */
@@ -297,14 +286,57 @@ footer img {
     padding-right: 30px;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-    nav {
-        flex-direction: column;
-        gap: 1em;
-        padding: 1em;
-    }
-    .hero {
-        padding: 2em 1em 1em 1em;
-    }
+/* Sección celulares */
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    gap: 1em;
+    padding: 1em 0;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+    align-items: flex-start;
+  }
+  .hero, .about, .contact {
+    padding: 2em 1em !important;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+  .hero h1, .hero p, .about p {
+    width: 100% !important;
+    font-size: 1.1em !important;
+  }
+  .projects-list {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: none !important;
+    justify-items: center;
+    gap: 2em;
+  }
+  .project-card {
+    width: 95vw !important;
+    min-width: unset !important;
+    max-width: 98vw !important;
+    padding: 1em !important;
+    min-height: unset;
+    height: auto;
+  }
+  .services-list {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: none !important;
+    justify-items: center;
+  }
+  .service-card {
+    max-width: 95vw !important;
+    width: 100% !important;
+  }
+  footer {
+    text-align: center;
+    padding: 0.5em 1em;
+    font-size: 0.9em;
+  }
+  footer img {
+    padding-right: 0;
+  }
 }
